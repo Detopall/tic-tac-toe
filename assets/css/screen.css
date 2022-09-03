@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+
+:root {
+	--cell-size: 11rem;
+	--mark-size :calc(var(--cell-size)* 0.9);
+}
+
+body {
+	margin: 0;
+	/*overflow: hidden;*/
+	background-color: grey;
+}
+
+header {
+	text-align: center;
+	font-size: 5rem;
+	margin-top: 9rem;
+	color: white;
+	text-shadow: 0.2rem 0.5rem 0.5rem black;
+}
+
+
+.board {
+	width: 100vw;
+	height: 50vh;
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	justify-items: center;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+}
+
+.cell {
+	width: var(--cell-size);
+	height: var(--cell-size);
+	background-color: white;
+	border: 0.5rem solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 11rem;
+	padding-bottom: 1.5rem;
+	cursor: pointer;
+	box-shadow: 0.5rem 0.5rem 0.5rem black;
+}
+
+.hidden {
+	display: none;
+}
+
+.cell:hover {
+	background-color: lightgray;
+}
+
+#outcome {
+	text-align: center;
+	margin-top: 2rem;
+}
+
+#restartBtn {
+	height: 3rem;
+	width: 10rem;
+}
+
+#outcome div {
+	margin-bottom: 2rem;
+	font-size: 4rem;
+	color: white;
+	text-shadow: 0.2rem 0.5rem 0.5rem black;
+}
+
+#outcome, #restartBtn, .cell, header, p {
+	font-family: 'Silkscreen';
+}
+
+p {
+	text-align: center;
+	font-size: 2rem;
+	text-decoration: underline;
+}
